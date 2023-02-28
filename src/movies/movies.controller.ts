@@ -5,7 +5,7 @@ import { MoviesService } from './movies.service';
 export class MoviesController {
   constructor(private moviesService: MoviesService) {}
 
-  @Get()
+  @Get('test')
   getTestService() {
     return this.moviesService.test();
   }

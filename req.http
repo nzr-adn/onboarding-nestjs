@@ -1,6 +1,6 @@
 ###
 GET http://localhost:3000/
 ###
-GET http://localhost:3000/users
+GET http://localhost:3000/users/test
 ###
-GET http://localhost:3000/movies
+GET http://localhost:3000/movies/test
