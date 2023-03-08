@@ -4,3 +4,11 @@ GET http://localhost:3000/
 GET http://localhost:3000/users/test
 ###
 GET http://localhost:3000/movies/test
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username" : "Jon",
+  "password" : "JonPassword"
+}
