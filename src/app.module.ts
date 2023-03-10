@@ -6,24 +6,17 @@ import { ConfigModule } from '@nestjs/config';
 import { UsersModule } from './users/users.module';
 import { MoviesModule } from './movies/movies.module';
 import { AuthModule } from './auth/auth.module';
+import { MovieTagsModule } from './movie-tags/movie-tags.module';
+import { typeOrmConfig } from './config/typeorm-config';
 
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: process.env.POSTGRES_HOST,
-      port: parseInt(process.env.POSTGRES_PORT),
-      username: process.env.POSTGRES_USER,
-      password: process.env.POSTGRES_PASS,
-      database: process.env.POSTGRES_DB,
-      entities: [],
-      synchronize: true,
-      autoLoadEntities: true,
-    }),
+    TypeOrmModule.forRoot(typeOrmConfig),
     AuthModule,
     UsersModule,
     MoviesModule,
+    MovieTagsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
