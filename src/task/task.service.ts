@@ -2,7 +2,6 @@ import { Inject, Injectable, Logger } from '@nestjs/common';
 import { Cron, CronExpression } from '@nestjs/schedule';
 import { MovieTagsService } from '../movie-tags/movie-tags.service';
 import { HttpService } from '@nestjs/axios';
-import { MoviesTagsEntity } from '../model/movies-tags.entity';
 
 @Injectable()
 export class TaskService {
