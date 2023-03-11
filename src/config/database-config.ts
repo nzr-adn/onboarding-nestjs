@@ -3,7 +3,8 @@ import { ConfigService } from '@nestjs/config';
 import { config } from 'dotenv';
 import { MoviesEntity } from '../model/movies.entity';
 import { UsersEntity } from '../model/users.entity';
-import { initTable1678478623343 } from '../migrations/1678478623343-init-table';
+import { MoviesTagsEntity } from '../model/movies-tags.entity';
+import { initTable1678550601695 } from '../migrations/1678550601695-init-table';
 
 config();
 const configService = new ConfigService();
@@ -16,8 +17,8 @@ const databaseConfig: DataSourceOptions = {
   username: configService.get('POSTGRES_USER'),
   password: configService.get('POSTGRES_PASSWORD'),
   database: configService.get('POSTGRES_DB'),
-  entities: [MoviesEntity, UsersEntity],
-  migrations: [initTable1678478623343],
+  entities: [MoviesEntity, UsersEntity, MoviesTagsEntity],
+  migrations: [initTable1678550601695],
   synchronize: false,
   logging: true,
   migrationsRun: true,

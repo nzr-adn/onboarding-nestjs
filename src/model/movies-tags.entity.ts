@@ -7,13 +7,13 @@ import {
   DeleteDateColumn,
 } from 'typeorm';
 
-@Entity()
+@Entity('movie_tags')
 export class MoviesTagsEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  title: string;
+  tag_name: string;
 
   @CreateDateColumn({ type: 'timestamptz' })
   created_at: Date;

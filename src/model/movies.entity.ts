@@ -7,7 +7,7 @@ import {
   DeleteDateColumn,
 } from 'typeorm';
 
-@Entity()
+@Entity('movies')
 export class MoviesEntity {
   @PrimaryGeneratedColumn()
   id: number;

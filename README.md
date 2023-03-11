@@ -14,3 +14,7 @@ yarn add -D @types/passport-jwt
 
 ## Validation
 yarn add class-validator class-transformer
+
+## Task Scheduling
+yarn add @nestjs/schedule
+yarn add -D @types/cron
