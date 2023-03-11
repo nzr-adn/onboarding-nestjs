@@ -11,3 +11,6 @@ yarn add @nestjs/passport passport passport-local
 yarn add -D @types/passport-local
 yarn add @nestjs/jwt passport-jwt
 yarn add -D @types/passport-jwt
+
+## Validation
+yarn add class-validator class-transformer
