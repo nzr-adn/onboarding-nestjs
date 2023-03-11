@@ -18,3 +18,6 @@ yarn add class-validator class-transformer
 ## Task Scheduling
 yarn add @nestjs/schedule
 yarn add -D @types/cron
+
+## Call API External
+yarn add @nestjs/axios axios
